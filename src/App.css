@@ -1,38 +1,122 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafc;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: 20px auto;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.barcode-input {
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.barcode-input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.date-picker {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.date-picker > * {
+  margin: 0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.download-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 15px;
+    max-width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .barcode-input {
+    font-size: 16px;
+    padding: 10px;
   }
+
+  .download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Additional Styles for Professional Look */
+.App-header {
+  border: 1px solid #e1e4e8;
+  background: linear-gradient(to bottom right, #ffffff, #f2f4f8);
+}
+
+h1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+
+.date-picker .react-datepicker__input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-picker .react-datepicker__input-container input {
+  border: none;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.date-picker .react-datepicker__input-container input:focus {
+  border-color: #3498db;
 }
