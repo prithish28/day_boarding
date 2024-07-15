@@ -98,7 +98,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Day Boaarding Attendance</h1>
+        <h1>Day Boarding Attendance</h1>
         <input 
           type="text" 
           className="barcode-input"
